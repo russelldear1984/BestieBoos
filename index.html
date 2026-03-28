@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bestie Boos Bottle Builder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="sparkle sparkle-a">✦</div>
+    <div class="sparkle sparkle-b">✧</div>
+
+    <main class="app-shell">
+      <header class="topbar">
+        <button id="backBtn" class="ghost-btn" aria-label="Go back">←</button>
+        <h1>Bestie Boos</h1>
+        <span class="planet-pill">🌍 Eco Hero</span>
+      </header>
+
+      <section id="screen-home" class="screen active">
+        <div class="hero-card">
+          <p class="badge">Bottle Builder</p>
+          <h2>Build your own planet-saving bottle!</h2>
+          <p>
+            Pick colours, patterns, and a squishy friend. Make it fun, reusable, and
+            ready for adventures.
+          </p>
+          <button class="btn-primary" data-go="customize">Start Designing ✨</button>
+        </div>
+
+        <div class="mascot-row">
+          <div class="mascot">🦆</div>
+          <div class="mascot">🐻</div>
+          <div class="mascot">🐬</div>
+          <div class="mascot">👾</div>
+        </div>
+      </section>
+
+      <section id="screen-customize" class="screen">
+        <h2>Step 1: Build your bottle</h2>
+        <div class="builder-layout">
+          <aside class="preview-panel">
+            <div id="bottlePreview" class="bottle slender">
+              <div class="lid"></div>
+              <div class="logo">Bestie Boos</div>
+              <div id="patternLayer" class="pattern pattern-stars"></div>
+              <div id="squishyMount" class="squishy-mount hidden"></div>
+            </div>
+          </aside>
+
+          <div class="controls">
+            <div class="control-block">
+              <h3>Pick a Shape</h3>
+              <div id="styleOptions" class="chips"></div>
+            </div>
+            <div class="control-block">
+              <h3>Splash of Color</h3>
+              <div id="colorOptions" class="swatches"></div>
+            </div>
+            <div class="control-block">
+              <h3>Magical Patterns</h3>
+              <div id="patternOptions" class="chips"></div>
+            </div>
+            <button class="btn-primary" data-go="squishy">Next: Pick a Squishy →</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="screen-squishy" class="screen">
+        <h2>Step 2: Pick your squishy</h2>
+        <p class="subtitle">Choose a Bestie Boo to guard your bottle top!</p>
+        <div class="squishy-preview-wrap">
+          <div id="squishyBottlePreview" class="bottle slender">
+            <div class="lid"></div>
+            <div class="logo">Bestie Boos</div>
+            <div id="patternLayer2" class="pattern pattern-stars"></div>
+            <div id="squishyMount2" class="squishy-mount"></div>
+          </div>
+        </div>
+        <div id="squishyOptions" class="squishy-grid"></div>
+        <button class="btn-primary" data-go="final">Next: Preview 🎉</button>
+      </section>
+
+      <section id="screen-final" class="screen">
+        <h2>You Built a Bestie!</h2>
+        <p class="subtitle">Your customized eco-bottle is ready for adventures.</p>
+        <div class="final-card">
+          <div id="finalBottlePreview" class="bottle slender">
+            <div class="lid"></div>
+            <div class="logo">Bestie Boos</div>
+            <div id="patternLayer3" class="pattern pattern-stars"></div>
+            <div id="squishyMount3" class="squishy-mount"></div>
+          </div>
+          <div class="eco-tip">
+            ♻️ Earth-Hero Tip: Every refill helps reduce plastic waste and keeps our
+            oceans happy!
+          </div>
+        </div>
+        <div class="button-row">
+          <button class="btn-primary" data-go="customize">Build Another</button>
+          <button class="btn-secondary" data-go="founders">Meet Martha & Lottie</button>
+        </div>
+      </section>
+
+      <section id="screen-founders" class="screen">
+        <h2>Meet Martha & Lottie</h2>
+        <div class="story-card">
+          <div class="founders-art" aria-hidden="true">
+            <div class="founder">👧🏻</div>
+            <div class="founder">👧🏼</div>
+          </div>
+          <h3>Planet-saving creators!</h3>
+          <p>
+            Once upon a time, best friends Martha and Lottie wanted every kid to love
+            reusable bottles. So they made Bestie Boos — cute, colourful, and kind to
+            Earth!
+          </p>
+          <ul>
+            <li>🌱 Reuse your bottle every day</li>
+            <li>🌊 Keep oceans and forests cleaner</li>
+            <li>💚 Big hearts, tiny steps</li>
+          </ul>
+        </div>
+        <button class="btn-primary" data-go="home">Back to Home</button>
+      </section>
+
+      <nav class="bottom-nav">
+        <button data-go="home">Home</button>
+        <button data-go="customize">Build</button>
+        <button data-go="final">My Boo</button>
+        <button data-go="founders">Eco-Club</button>
+      </nav>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
